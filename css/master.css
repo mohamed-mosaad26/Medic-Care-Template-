@@ -1,0 +1,1326 @@
+/* start global rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --maincolor: #247cff;
+  --h2Font: "Lobster";
+  --paragraphFont: "Roboto";
+  --mainTransition: 0.5s;
+}
+
+ul {
+  list-style: none;
+}
+/* end global rules  */
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: var(--h2Font), sans-serif;
+}
+
+p {
+  font-family: var(--paragraphFont), sans-serif;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* container  media  */
+/* mobile  */
+@media (max-width: 575px) {
+}
+/* ipad  */
+@media (min-width: 576px) {
+}
+/* small screens  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* meduim screens  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screens  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* very large screens  */
+@media (min-width: 1400px) {
+}
+
+/* container  media  */
+
+/* Start Header  */
+.header {
+  padding: 15px 0;
+  box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+}
+
+.header .container {
+  display: flex;
+  align-content: center;
+  padding: 0 60px;
+}
+
+@media (max-width: 767px) {
+  .header .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+/* Logo  */
+
+.header .container .logo {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .header .container .logo {
+    order: 2;
+  }
+}
+
+.header .container .logo h2 {
+  font-size: 30px;
+  color: var(--maincolor);
+}
+
+.header .container .logo span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Logo  */
+/* Ul  */
+
+.header .container ul {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .header .container ul.left_ul {
+    order: 1;
+  }
+}
+
+.header .container ul li {
+  padding: 15px 20px;
+}
+
+@media (max-width: 767px) {
+  .header .container ul li {
+    padding: 5px 10px;
+  }
+}
+
+.header .container ul li a {
+  color: black;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: var(--mainTransition);
+}
+
+.header .container ul li a:hover {
+  opacity: 1;
+}
+
+.header .container ul.left_ul li:first-child a {
+  opacity: 1;
+}
+
+/* Ul  */
+/* End header  */
+.landing {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 83px;
+  background-image: url("../images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg");
+  background-size: cover;
+  z-index: -1;
+  margin-bottom: 80px;
+}
+
+.landing .landing-text {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  max-width: 600px;
+  background-color: white;
+  padding: 25px 30px;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+  }
+}
+
+.landing .landing-text h2 {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.landing .landing-text ul {
+  max-height: 100px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.landing .landing-text ul li {
+  font-size: 70px;
+  font-family: var(--h2Font);
+  padding: 10px;
+  color: var(--maincolor);
+}
+
+.landing .landing-text ul li:first-child {
+  animation: shuffle infinite 15s linear;
+}
+
+@keyframes shuffle {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -100px;
+  }
+  40% {
+    margin-top: -200px;
+  }
+  60% {
+    margin-top: -200px;
+  }
+  80% {
+    margin-top: -100px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.landing .landing-text p {
+  padding-right: 50px;
+  line-height: 1.8;
+  color: #777;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text p {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+}
+
+.landing .landing-text .btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text .btns {
+    flex-direction: column;
+  }
+}
+
+.landing .landing-text .btns button {
+  border: 1px solid var(--maincolor);
+  background-color: white;
+  position: relative;
+}
+
+.landing .landing-text .btns button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0%;
+  background: rgba(128, 128, 128, 0.301);
+  transition: var(--mainTransition);
+}
+
+.landing .landing-text .btns button:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.landing .landing-text .btns button a {
+  display: block;
+  padding: 20px 50px;
+  transition: var(--mainTransition);
+  z-index: 2;
+}
+
+.landing .landing-text .btns button a {
+  color: var(--maincolor);
+  font-size: 25px;
+}
+
+.landing .landing-text .btns span {
+  display: block;
+  margin: 15px 0 0;
+  color: #777;
+  font-size: 20px;
+}
+
+.landing .landing-text .btns span i {
+  font-size: 25px;
+  color: var(--maincolor);
+  margin-right: 10px;
+}
+
+/* End .landing  */
+/* Start Meeting  */
+.meeting {
+  position: relative;
+  padding: 100px 0;
+}
+
+.meeting .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .meeting .container {
+    flex-direction: column;
+    gap: 250px;
+  }
+}
+
+.meeting .container .experience,
+.meeting .container .inner-text {
+  flex-basis: 50%;
+}
+
+.meeting .container .inner-text h2 {
+  font-size: 50px;
+  color: var(--maincolor);
+  margin-bottom: 15px;
+}
+
+.meeting .container .inner-text p {
+  color: #777;
+  font-size: 23px;
+  line-height: 1.8;
+}
+
+.meeting .container .experience {
+  text-align: center;
+  position: relative;
+}
+
+.meeting .container .experience .experience-years {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 81px 9px #00000075;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meeting .container .experience p span {
+  font-size: 180px;
+  font-weight: bold;
+  color: var(--maincolor);
+  font-family: var(--h2Font);
+  display: inline-block;
+}
+
+.meeting .container .experience p {
+  font-size: 28px;
+  color: #777;
+}
+
+.meeting .container .images {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.meeting .container .images img {
+  width: 49%;
+  display: inline;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .meeting .container .images img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* End meeting  */
+/* start Timeline  */
+.timeline {
+  position: relative;
+  padding: 100px 0;
+  background-color: #e0dcdc;
+}
+
+.timeline .container h2 {
+  text-align: center;
+  font-size: 50px;
+  color: var(--maincolor);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline .container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background-color: var(--maincolor);
+}
+
+.timeline .container .times .time {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 70px;
+}
+
+.timeline .container .times .time .text {
+  width: 40%;
+}
+
+.timeline .container .times .time .text h3 {
+  padding: 13px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.timeline .container .times .time .text p {
+  line-height: 1.8;
+  color: #777;
+  padding: 20px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+}
+
+.timeline .container .times .time i {
+  padding: 20px;
+  height: fit-content;
+  font-size: 30px;
+  color: var(--maincolor);
+  background-color: white;
+  border-radius: 50%;
+}
+
+.timeline .container .times .time span {
+  align-self: flex-start;
+  padding-top: 25px;
+  display: block;
+  font-size: 20px;
+  color: #777;
+}
+
+.timeline .container .times .time:nth-child(2) .text,
+.timeline .container .times .time:nth-child(4) .text {
+  order: 3;
+}
+
+.timeline .container .times .time:nth-child(2) span,
+.timeline .container .times .time:nth-child(4) span {
+  order: 1;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --maincolor: #247cff;
+  --h2Font: "Lobster";
+  --paragraphFont: "Roboto";
+  --mainTransition: 0.5s;
+}
+
+ul {
+  list-style: none;
+}
+/* end global rules  */
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-family: var(--h2Font), sans-serif;
+}
+
+p {
+  font-family: var(--paragraphFont), sans-serif;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* container  media  */
+/* mobile  */
+@media (max-width: 575px) {
+}
+/* ipad  */
+@media (min-width: 576px) {
+}
+/* small screens  */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* meduim screens  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screens  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* very large screens  */
+@media (min-width: 1400px) {
+}
+
+/* container  media  */
+
+/* Start Header  */
+.header {
+  padding: 15px 0;
+  box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+}
+
+.header .container {
+  display: flex;
+  align-content: center;
+  padding: 0 60px;
+}
+
+@media (max-width: 767px) {
+  .header .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+/* Logo  */
+
+.header .container .logo {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .header .container .logo {
+    order: 2;
+  }
+}
+
+.header .container .logo h2 {
+  font-size: 30px;
+  color: var(--maincolor);
+}
+
+.header .container .logo span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Logo  */
+/* Ul  */
+
+.header .container ul {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .header .container ul.left_ul {
+    order: 1;
+  }
+}
+
+.header .container ul li {
+  padding: 15px 20px;
+}
+
+@media (max-width: 767px) {
+  .header .container ul li {
+    padding: 5px 10px;
+  }
+}
+
+.header .container ul li a {
+  color: black;
+  font-size: 18px;
+  opacity: 0.5;
+  transition: var(--mainTransition);
+}
+
+.header .container ul li a:hover {
+  opacity: 1;
+}
+
+.header .container ul.left_ul li:first-child a {
+  opacity: 1;
+}
+
+/* Ul  */
+/* End header  */
+.landing {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  top: 83px;
+  background-image: url("../images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg");
+  background-size: cover;
+  z-index: -1;
+  margin-bottom: 80px;
+}
+
+.landing .landing-text {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  max-width: 600px;
+  background-color: white;
+  padding: 25px 30px;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+  }
+}
+
+.landing .landing-text h2 {
+  font-size: 70px;
+  margin-bottom: 10px;
+}
+
+.landing .landing-text ul {
+  max-height: 100px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.landing .landing-text ul li {
+  font-size: 70px;
+  font-family: var(--h2Font);
+  padding: 10px;
+  color: var(--maincolor);
+}
+
+.landing .landing-text ul li:first-child {
+  animation: shuffle infinite 15s linear;
+}
+
+@keyframes shuffle {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -100px;
+  }
+  40% {
+    margin-top: -200px;
+  }
+  60% {
+    margin-top: -200px;
+  }
+  80% {
+    margin-top: -100px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.landing .landing-text p {
+  padding-right: 50px;
+  line-height: 1.8;
+  color: #777;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text p {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+}
+
+.landing .landing-text .btns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+@media (max-width: 767px) {
+  .landing .landing-text .btns {
+    flex-direction: column;
+  }
+}
+
+.landing .landing-text .btns button {
+  border: 1px solid var(--maincolor);
+  background-color: white;
+  position: relative;
+}
+
+.landing .landing-text .btns button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0%;
+  background: rgba(128, 128, 128, 0.301);
+  transition: var(--mainTransition);
+}
+
+.landing .landing-text .btns button:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.landing .landing-text .btns button a {
+  display: block;
+  padding: 20px 50px;
+  transition: var(--mainTransition);
+  z-index: 2;
+}
+
+.landing .landing-text .btns button a {
+  color: var(--maincolor);
+  font-size: 25px;
+}
+
+.landing .landing-text .btns span {
+  display: block;
+  margin: 15px 0 0;
+  color: #777;
+  font-size: 20px;
+}
+
+.landing .landing-text .btns span i {
+  font-size: 25px;
+  color: var(--maincolor);
+  margin-right: 10px;
+}
+
+/* End .landing  */
+/* Start Meeting  */
+.meeting {
+  position: relative;
+  padding: 100px 0;
+}
+
+.meeting .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .meeting .container {
+    flex-direction: column;
+    gap: 250px;
+  }
+}
+
+.meeting .container .experience,
+.meeting .container .inner-text {
+  flex-basis: 50%;
+}
+
+.meeting .container .inner-text h2 {
+  font-size: 50px;
+  color: var(--maincolor);
+  margin-bottom: 15px;
+}
+
+.meeting .container .inner-text p {
+  color: #777;
+  font-size: 23px;
+  line-height: 1.8;
+}
+
+.meeting .container .experience {
+  text-align: center;
+  position: relative;
+}
+
+.meeting .container .experience .experience-years {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 81px 9px #00000075;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.meeting .container .experience p span {
+  font-size: 180px;
+  font-weight: bold;
+  color: var(--maincolor);
+  font-family: var(--h2Font);
+  display: inline-block;
+}
+
+.meeting .container .experience p {
+  font-size: 28px;
+  color: #777;
+}
+
+.meeting .container .images {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.meeting .container .images img {
+  width: 49%;
+  display: inline;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .meeting .container .images img {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* End meeting  */
+/* start Timeline  */
+.timeline {
+  position: relative;
+  padding: 100px 0;
+  background-color: #eee3e3;
+}
+
+.timeline .container h2 {
+  text-align: center;
+  font-size: 50px;
+  color: var(--maincolor);
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline .container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background-color: var(--maincolor);
+}
+
+.timeline .container .times .time {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time {
+    flex-direction: column-reverse;
+  }
+}
+
+.timeline .container .times .time .text {
+  width: 40%;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time .text {
+    width: 100%;
+  }
+}
+
+.timeline .container .times .time .text h3 {
+  padding: 13px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time .text h3 {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+.timeline .container .times .time .text p {
+  line-height: 1.8;
+  color: #777;
+  padding: 20px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time .text p {
+    font-size: 15px;
+  }
+}
+
+.timeline .container .times .time i {
+  padding: 20px;
+  height: fit-content;
+  font-size: 30px;
+  color: var(--maincolor);
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time i {
+    font-size: 30px;
+    padding: 15px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    margin-bottom: -35px;
+  }
+}
+
+.timeline .container .times .time i::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 300px;
+  background-color: #777;
+  top: 100%;
+  opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time i::after {
+    display: none;
+  }
+}
+
+.timeline .container .times .time:last-child i::after {
+  height: 250px;
+}
+
+.timeline .container .times .time span {
+  align-self: flex-start;
+  padding-top: 50px;
+  display: block;
+  font-size: 20px;
+  color: #777;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time span {
+    display: none;
+  }
+}
+
+.timeline .container .times .time:nth-child(2) .text,
+.timeline .container .times .time:nth-child(4) .text {
+  order: 3;
+}
+
+.timeline .container .times .time:nth-child(2) span,
+.timeline .container .times .time:nth-child(4) span {
+  order: 1;
+}
+
+.timeline .container .times .time:nth-child(2) i,
+.timeline .container .times .time:nth-child(4) i {
+  order: 2;
+}
+
+@media (max-width: 767px) {
+  .timeline .container .times .time:nth-child(2) .text,
+  .timeline .container .times .time:nth-child(4) .text {
+    order: 0;
+  }
+
+  .timeline .container .times .time:nth-child(2) span,
+  .timeline .container .times .time:nth-child(4) span {
+    order: 0;
+  }
+
+  .timeline .container .times .time:nth-child(2) i,
+  .timeline .container .times .time:nth-child(4) i {
+    order: 0;
+  }
+}
+
+/* End Timeline  */
+/* Start Our Patiens  */
+.our_patients {
+  position: relative;
+  padding: 100px 0;
+}
+
+.our_patients .container h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: var(--maincolor);
+  position: relative;
+}
+
+.our_patients .container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background-color: var(--maincolor);
+}
+
+.our_patients .container .patients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.our_patients .container .patients .patient {
+  padding: 30px 15px 20px;
+  flex-basis: 30%;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  transition: var(--mainTransition);
+}
+
+.our_patients .container .patients .patient:hover {
+  transform: scale(1.2, 1.2);
+  background-color: var(--maincolor);
+  border: 1px solid var(--maincolor);
+}
+
+@media (max-width: 767px) {
+  .our_patients .container .patients .patient {
+    flex-basis: 100%;
+  }
+}
+
+.our_patients .container .patients .patient .stars i {
+  color: white;
+}
+
+.our_patients .container .patients .patient:hover .stars i {
+  color: black;
+}
+
+.our_patients .container .patients .patient h3 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: var(--maincolor);
+  transition: var(--mainTransition);
+}
+
+.our_patients .container .patients .patient:hover h3 {
+  color: white;
+}
+
+.our_patients .container .patients .patient p {
+  line-height: 1.8;
+  font-size: 19px;
+  color: white;
+}
+
+.our_patients .container .patients .patient .image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.our_patients .container .patients .patient .image img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.our_patients .container .patients .patient .image p {
+  color: white;
+  font-weight: bold;
+}
+
+.our_patients .container .patients .patient .image p span {
+  color: #777;
+  transition: var(--mainTransition);
+}
+
+.our_patients .container .patients .patient:hover .image p span {
+  color: black;
+}
+
+/* End patient */
+/* Start Form  */
+.booking-form {
+  position: relative;
+  padding: 100px 0;
+}
+
+.booking-form h2 {
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  color: var(--maincolor);
+  margin-bottom: 50px;
+}
+
+.booking-form h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background-color: var(--maincolor);
+}
+
+.booking-form .container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 15px 20px;
+  justify-content: center;
+}
+
+.booking-form .container form input {
+  flex-basis: 40%;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--maincolor);
+  transition: var(--mainTransition);
+}
+
+@media (max-width: 767px) {
+  .booking-form .container form input {
+    flex-basis: 100%;
+  }
+}
+
+.booking-form .container form textarea,
+.booking-form .container form input:focus {
+  outline-color: var(--maincolor);
+  caret-color: var(--maincolor);
+}
+
+.booking-form .container form input::placeholder {
+  transition: var(--mainTransition);
+}
+
+.booking-form .container form input:focus::placeholder {
+  opacity: 0;
+}
+
+.booking-form .container form textarea {
+  flex-basis: 83%;
+  height: 150px;
+  resize: none;
+  padding: 10px;
+  transition: var(--mainTransition);
+}
+
+.booking-form .container button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  padding: 15px 35px;
+  background-color: black;
+  border: none;
+  transition: var(--mainTransition);
+}
+
+.booking-form .container button a {
+  font-size: 25px;
+  color: white;
+  transition: var(--mainTransition);
+}
+
+.booking-form .container button:hover {
+  background-color: var(--maincolor);
+}
+
+/* End Booking  */
+/* Start Footer  */
+.footer {
+  position: relative;
+  padding-top: 50px;
+  transition: var(--mainTransition);
+  background-color: black;
+  margin-top: 20px;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: nowrap;
+  padding: 15px 0;
+}
+
+@media (max-width: 767px) {
+  .footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer .container h2 {
+  font-size: 25px;
+  color: var(--maincolor);
+}
+
+.footer .container span {
+  display: block;
+  padding: 10px 0;
+  font-size: 18px;
+  color: white;
+}
+
+.footer .container .socials ul {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .footer .container .socials ul {
+    justify-content: center;
+  }
+}
+
+.footer .container .socials ul li {
+  padding: 10px;
+  color: var(--maincolor);
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .container .socials ul li i {
+  transition: var(--mainTransition);
+}
+
+.footer .container .socials ul li:hover i {
+  font-size: 25px;
+  color: black;
+  transform: scale(1.1, 1.1);
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  border-top: 1px solid white;
+}
+
+/* End Footer  */
